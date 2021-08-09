@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        section{
+            background-color: rgb(191, 226, 226);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1200px;
+            height: 500px;
+        }
+        .box{
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .wrapper{
+            width: 450px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        .wrapper__one{
+            justify-content: center;
+            width: 450px;
+            align-items: center;
+        }
+        /* .wrapper__one .box__item{
+            width: 250px;
+        } */
+        .two{
+            width: 650px;
+        }
+        .three{
+            width: 950px;
+        }
+        .three .box__item{
+            width: 200px;
+        }
+        .box__item{
+            width: 160px;
+            height: 50px;
+            background-color: chartreuse;
+        }
+        span{
+            display: block;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .circl{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: cornsilk;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(7, 7, 7);
+        }
+        h2{
+            display: inline-block;
+            margin-left: 30%;
+            margin-top: 15px;
+            font-size: 30px;
+        }
+        input{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size:15px;
+            border: none;
+            outline: none;
+            background-color: rgb(253, 253, 250);
+            box-shadow: 0 0 10px 1px rgb(19, 19, 18);
+        }
+        button{
+            width: 100%;
+            height: 100%;
+            background-color: chartreuse;
+            font-weight: 700;
+            transition: .5s;
+            border: none;
+            box-shadow: 0 0 10px 1px rgb(19, 19, 18);
+        }
+        .clasActiv{
+            background-color:rgb(43, 47, 39);
+            transform: scale(1.1);
+            color: rgb(255, 0, 0);
+        }
+        /* button:hover{
+            background-color:rgb(43, 47, 39);
+            transform: scale(1.1);
+            color: rgb(255, 0, 0);
+        } */
+
+        .footer{
+            padding-top: 20px;
+            margin: 0 auto;
+            width: 500px;
+            height: 50px;
+            /* background-color: darkblue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer__item{
+            display:inline-block;
+            margin: 0;
+            font-size: 25px;
+        }
+        .num{
+            width: 60px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+        hr{
+            width: 300px;
+            margin-left: 35%;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Расчитаем вашу потребность в калориях?</h2>
+    <section>
+        <div class="box">
+            <span>Ваш пол</span>
+            <div class="wrapper wrapper__one">
+                <div class="box__item">
+                    <button id="male">Мужчина</button>
+                </div>
+                <div class="circl"><></div>
+                <div class="box__item">
+                    <button id="female">Женщина</button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <span>Ваша инструкция</span>
+            <div class="wrapper two">
+                <div class="box__item">
+                    <input type="text" placeholder="введите рост" name="" id="height">
+                </div>
+                <div class="box__item">
+                    <input type="text" placeholder="введите вес" name="" id="weight">
+                </div>
+                <div class="box__item">
+                    <input type="text" placeholder="введите вoзраст" name="" id="age">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <span>Выберите вашу физическую активность</span>
+            <div class="wrapper three">
+                <div class="box__item">
+                    <button data-ratio="1.2">Низкая активность</button> 
+                </div>
+                <div class="box__item">
+                    <button data-ratio="1.375">Невысокая активность</button> 
+                </div>
+                <div class="box__item">
+                    <button data-ratio="1.55">Умеренная активность</button> 
+                </div>
+                <div class="box__item">
+                    <button data-ratio="1.725">Высокая активность</button> 
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer">
+            <span class="footer__item">Ваша суточная норма калорий</span>
+            <div class="num">456</div><h3>ккал</h3>
+        </div>
+        <hr>
+    </section>
+    <footer>
+        
+    </footer>
+    <script src="/калькулятор/calculat..js"></script>
+</body>
+</html>
